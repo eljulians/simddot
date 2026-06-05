@@ -1,0 +1,13 @@
+name: wheels
+on: [push, workflow_dispatch]
+jobs:
+  linux-wheels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test wheels in manylinux
+        run: pipx run cibuildwheel --platform linux
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels
+          path: wheelhouse/*.whl
