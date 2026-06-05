@@ -73,7 +73,7 @@ def _get_project_anchors(project_name: str, wheels: list) -> list[str]:
         anchors.append(
             f'<a href="../../packages/{wheel_filename}#sha256={digest}" '
             f'data-requires-python="{requires_python}">'
-            f'{wheel}</a>'
+            f'{wheel_filename}</a>'
         )
 
     return anchors
