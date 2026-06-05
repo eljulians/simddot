@@ -6,3 +6,8 @@ build-backend = "scikit_build_core.build"
 name = "simddot"
 version = "0.0.1"
 requires-python = ">=3.12"
+
+[tool.cibuildwheel]
+build = ["cp312-*", "cp313-*"]
+test-requires = ["pytest"]
+test-command = "pytest {project}/tests"
