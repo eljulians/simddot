@@ -16,4 +16,5 @@ test-command = "pytest {project}/tests"
 dev = [
     "pytest>=9.0.3",
     "ruff>=0.15.16",
+    "tomli-w>=1.2.0",
 ]
