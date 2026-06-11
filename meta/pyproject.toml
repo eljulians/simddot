@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simddot"
+version = "0.0.1"
+requires-python = ">=3.12"
+
+[project.optional-dependencies]
+avx2 = ["simddot-core-avx2"]
+generic = ["simddot-core-generic"]
